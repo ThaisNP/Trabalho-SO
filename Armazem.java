@@ -6,8 +6,7 @@ public class Armazem {
 	
 	public synchronized void armazenarNumero (int num) {
 		
-		while (disponivel){
-			
+		while (disponivel) {
 			try {
 				wait();
 				
@@ -24,7 +23,7 @@ public class Armazem {
 	
 	public synchronized void lerNumero(){
 		
-		while (!disponivel){
+		while (!disponivel) {
 			try {
 				wait();
 				
